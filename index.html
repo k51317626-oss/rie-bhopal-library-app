@@ -1,99 +1,114 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#103b68"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="RIE Library"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><meta name="description" content="RIE Bhopal Library — catalogue, digital learning and library resources in one place.">
-<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#12365a">
+<meta name="description" content="RIE Bhopal Library — learning resources, e-books, journals, catalogue and research support.">
 <title>RIE Bhopal Library</title>
+<link rel="manifest" href="./manifest.json">
+<link rel="icon" href="./icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
 <style>
-:root{--navy:#103b68;--blue:#1769aa;--teal:#0d9488;--ink:#172b42;--muted:#6d7d90;--paper:#f4f7fb;--line:#e6edf4;--white:#fff;--saffron:#f3a33b;--shadow:0 12px 32px rgba(21,52,83,.09)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);padding-bottom:92px}a{color:inherit;text-decoration:none}button,input{font:inherit}.app{max-width:760px;margin:auto;min-height:100vh;background:var(--paper)}
-.hero{position:relative;overflow:hidden;background:linear-gradient(145deg,#0b2c50 0%,#14588e 62%,#117c89 100%);color:#fff;padding:24px 20px 34px;border-radius:0 0 30px 30px}.hero:after{content:"";position:absolute;width:230px;height:230px;border:1px solid #ffffff20;border-radius:50%;right:-88px;top:-95px;box-shadow:0 0 0 28px #ffffff09,0 0 0 58px #ffffff06}.topline{display:flex;align-items:center;gap:12px;position:relative;z-index:1}.brandmark{height:48px;width:48px;border-radius:15px;background:#fff;color:var(--navy);display:grid;place-items:center;flex:none}.brandmark svg{width:30px}.brandname{font-weight:800;font-size:15px;letter-spacing:.3px}.brand-sub{font-size:10px;opacity:.78;margin-top:3px;letter-spacing:.5px}.top-actions{margin-left:auto;display:flex;gap:8px}.circle-btn{border:1px solid #ffffff40;background:#ffffff12;color:#fff;width:40px;height:40px;border-radius:13px;display:grid;place-items:center;cursor:pointer}.welcome{position:relative;z-index:1;margin-top:29px}.eyebrow{font-size:10px;font-weight:800;letter-spacing:1.7px;text-transform:uppercase;color:#bce8ef}.welcome h1{font-size:clamp(26px,6vw,35px);line-height:1.12;letter-spacing:-1px;margin:9px 0}.welcome p{font-size:13px;line-height:1.6;color:#e1edf7;max-width:330px;margin:0}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.btn{border:0;border-radius:13px;padding:12px 15px;font-weight:750;font-size:12px;display:inline-flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}.btn-light{background:#fff;color:var(--navy)}.btn-glass{background:#ffffff15;border:1px solid #ffffff50;color:#fff}.search-wrap{position:relative;margin:-19px 17px 0;z-index:2}.searchbox{display:flex;align-items:center;gap:10px;background:#fff;padding:0 15px;border:1px solid #e7edf4;border-radius:16px;box-shadow:var(--shadow);height:56px}.searchbox input{border:0;outline:0;min-width:0;width:100%;font-size:13px;color:var(--ink);background:transparent}.searchbox svg{color:#75879b;flex:none}.content{padding:0 17px}.section{margin-top:27px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:13px}.section-head h2{font-size:17px;letter-spacing:-.3px;margin:0}.section-head p{font-size:11px;color:var(--muted);margin:5px 0 0}.text-link{font-size:11px;font-weight:800;color:var(--blue);white-space:nowrap}.quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.quick-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px 13px;min-height:120px;display:flex;flex-direction:column;gap:11px;box-shadow:0 3px 12px #193b5b05;transition:transform .15s,border-color .15s}.quick-card:active{transform:scale(.98)}.qicon{height:39px;width:39px;border-radius:13px;display:grid;place-items:center}.qicon svg{width:20px;height:20px}.t-blue{background:#e9f2ff;color:#2269b0}.t-teal{background:#e0f7f2;color:#0b8177}.t-amber{background:#fff1d9;color:#a7650b}.t-violet{background:#f0eaff;color:#7253b7}.t-rose{background:#ffe9ed;color:#b84e68}.t-sky{background:#e4f5ff;color:#247c9d}.quick-card strong{font-size:11px;line-height:1.35}.quick-card small{font-size:10px;color:var(--muted);line-height:1.3}.feature-card{border-radius:21px;padding:19px;background:linear-gradient(120deg,#e9f6f5,#eef4ff);border:1px solid #dcebea;display:flex;gap:13px;align-items:center;overflow:hidden}.feature-copy{flex:1;min-width:0}.pill{display:inline-block;background:#d4f1e9;color:#087568;font-size:9px;font-weight:850;letter-spacing:.7px;padding:6px 8px;border-radius:99px;text-transform:uppercase}.feature-card h3{font-size:18px;line-height:1.2;margin:10px 0 6px;letter-spacing:-.4px}.feature-card p{font-size:11px;line-height:1.55;color:#5d7083;margin:0 0 12px}.feature-card .btn{background:var(--navy);color:#fff;padding:10px 12px;font-size:11px}.book-art{width:96px;height:110px;flex:none;display:grid;place-items:center}.book-art svg{width:100%;height:auto;filter:drop-shadow(0 8px 8px #163b5520)}.resource-list{display:grid;gap:10px}.resource{display:flex;align-items:center;gap:12px;padding:13px;background:#fff;border:1px solid var(--line);border-radius:16px}.resource .qicon{flex:none}.resource-copy{min-width:0;flex:1}.resource-copy strong{display:block;font-size:12px}.resource-copy span{display:block;font-size:10px;color:var(--muted);margin-top:4px;line-height:1.35}.arrow{color:#7b8ca0;font-size:20px}.notice{display:flex;gap:12px;align-items:flex-start;padding:15px;border-radius:16px;background:#fff8eb;border:1px solid #f5e6c8}.notice-icon{background:#ffedc8;color:#94600c;width:35px;height:35px;border-radius:11px;display:grid;place-items:center;flex:none}.notice strong{font-size:12px}.notice p{font-size:11px;line-height:1.55;color:#78694d;margin:5px 0 0}.footer{text-align:center;padding:26px 20px 4px;color:#8190a1;font-size:10px;line-height:1.7}.bottom-nav{position:fixed;z-index:10;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,760px);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(4,1fr);background:#ffffffed;backdrop-filter:blur(18px);border-top:1px solid #e5ebf2}.nav-item{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;color:#8290a0;font-size:9px;font-weight:750;padding:4px}.nav-item svg{width:20px;height:20px}.nav-item.active{color:var(--blue)}.nav-item.active svg{stroke-width:2.5}.empty{display:none;padding:20px;text-align:center;color:var(--muted);font-size:12px}.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);background:#102e4d;color:white;border-radius:12px;padding:11px 15px;font-size:12px;box-shadow:var(--shadow);display:none;z-index:20;max-width:90%;text-align:center}
-@media(min-width:430px){.quick-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(min-width:600px){body{padding:22px 0 100px}.app{border-radius:28px;overflow:hidden;box-shadow:0 15px 60px #15314b12}.hero{padding:30px 28px 38px}.content{padding:0 24px}.search-wrap{margin-left:24px;margin-right:24px}.quick-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.quick-card{padding:16px;min-height:120px}.section{margin-top:32px}.bottom-nav{bottom:12px;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding-bottom:10px}}
-@media(max-width:360px){.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.brandname{font-size:13px}.hero{padding-left:16px;padding-right:16px}.book-art{width:75px}}
+:root{--navy:#12365a;--blue:#1769aa;--gold:#f1bd55;--ink:#182b3e;--muted:#637487;--bg:#f3f7fb;--card:#fff;--line:#e1e9f1;--shadow:0 10px 28px rgba(18,54,90,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit;text-decoration:none}.topbar{background:var(--navy);color:#fff;padding:10px 18px;font-size:.85rem;text-align:center}
+header{background:linear-gradient(130deg,#102e4e,#1b5d91);color:#fff;padding:24px 18px 30px}
+.wrap{max-width:1120px;margin:auto}.brand{display:flex;align-items:center;gap:14px}.logo{width:58px;height:58px;border-radius:17px;background:#fff;color:var(--navy);display:grid;place-items:center;font-size:29px;box-shadow:0 6px 18px #061c3344;flex:none}
+h1{font-size:clamp(1.45rem,4vw,2.2rem);line-height:1.15;margin:0 0 6px}.subtitle{margin:0;color:#dce9f6;font-size:.95rem}.hero{display:grid;grid-template-columns:1.4fr .8fr;gap:24px;align-items:center;padding-top:28px}.hero h2{font-size:clamp(1.7rem,4vw,2.8rem);line-height:1.12;margin:0 0 12px}.hero p{color:#e2edf8;max-width:650px;margin:0 0 20px}.hero-panel{background:#ffffff13;border:1px solid #ffffff2b;border-radius:22px;padding:22px;backdrop-filter:blur(4px)}.hero-panel strong{display:block;font-size:1.1rem;margin-bottom:7px}.hero-panel p{font-size:.9rem;margin:0}
+.searchrow{display:flex;gap:8px;max-width:620px}.searchrow input{min-width:0;flex:1;padding:14px 15px;border:1px solid #ffffff70;border-radius:12px;font:inherit;outline:none}.searchrow button,.btn{border:0;background:var(--gold);color:#1b2b3b;font-weight:750;border-radius:12px;padding:12px 16px;cursor:pointer;font:inherit}.searchrow button{font-weight:800}
+nav{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 3px 12px #0d2b4510}.navinner{max-width:1120px;margin:auto;display:flex;gap:6px;padding:9px 14px;overflow-x:auto}.navinner a{white-space:nowrap;padding:8px 12px;border-radius:10px;color:#334c65;font-weight:650;font-size:.9rem}.navinner a:hover{background:#eaf2fa;color:var(--blue)}
+main{max-width:1120px;margin:auto;padding:28px 16px 48px}.section{margin-bottom:34px}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:14px;margin-bottom:15px}.sectionhead h2{font-size:1.45rem;margin:0;color:var(--navy)}.sectionhead p{margin:3px 0 0;color:var(--muted);font-size:.92rem}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow);min-width:0}.resource{display:flex;gap:13px;align-items:flex-start;min-height:128px;transition:transform .15s,border-color .15s}.resource:hover{transform:translateY(-2px);border-color:#a8c8e6}.ico{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:#eaf3fc;font-size:23px;flex:none}.resource h3{margin:1px 0 5px;font-size:1rem;color:var(--navy)}.resource p{margin:0 0 10px;font-size:.86rem;color:var(--muted)}.go{font-size:.85rem;font-weight:800;color:var(--blue)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{text-align:center;background:#eaf2fa;border-radius:16px;padding:17px 8px}.stat strong{display:block;color:var(--navy);font-size:1.25rem}.stat span{color:var(--muted);font-size:.85rem}
+.notice{display:flex;gap:12px;align-items:flex-start}.notice .ico{background:#fff4d9}.notice h3{margin:0 0 5px}.notice p{margin:0;color:var(--muted);font-size:.9rem}.contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.contactline{display:flex;gap:12px;margin:12px 0}.contactline span:first-child{font-size:1.2rem}.contactline p{margin:0;color:var(--muted);font-size:.92rem}.contactline strong{display:block;color:var(--ink)}footer{background:#0d2945;color:#e4edf6;padding:25px 16px;text-align:center;font-size:.88rem}footer p{margin:4px}
+.empty{display:none;padding:18px;color:var(--muted);text-align:center}.installhint{margin-top:14px;color:#d9e8f6;font-size:.86rem}.installhint button{border:1px solid #ffffff7a;background:transparent;color:white;border-radius:10px;padding:8px 11px;font-weight:700;cursor:pointer}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.hero-panel{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.contactgrid{grid-template-columns:1fr}.sectionhead{align-items:start;flex-direction:column}}
+@media(max-width:460px){header{padding:20px 14px 24px}.brand{gap:11px}.logo{width:48px;height:48px;border-radius:14px;font-size:24px}.subtitle{font-size:.82rem}.hero{padding-top:23px}.searchrow{gap:6px}.searchrow input{padding:12px 10px}.searchrow button{padding:10px 12px}main{padding:22px 12px 38px}.grid{gap:10px}.card{padding:13px;border-radius:15px}.resource{display:block;min-height:0}.ico{margin-bottom:10px;width:40px;height:40px;font-size:20px}.resource h3{font-size:.95rem}.resource p{font-size:.82rem}.stats{gap:7px}.stat{padding:13px 5px}.stat strong{font-size:1.05rem}.stat span{font-size:.76rem}}
 </style>
 </head>
-<body><div class="app" id="home">
-<header class="hero"><div class="topline"><div class="brandmark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M5 14.5c7-3 13-2 19 2v21c-6-4-12-5-19-2v-21Z" stroke="#103b68" stroke-width="2.7" stroke-linejoin="round"/><path d="M43 14.5c-7-3-13-2-19 2v21c6-4 12-5 19-2v-21Z" stroke="#103b68" stroke-width="2.7" stroke-linejoin="round"/><path d="M24 16.5v21" stroke="#0d9488" stroke-width="2.7"/><path d="M12 9h24" stroke="#f3a33b" stroke-width="3" stroke-linecap="round"/></svg></div><div><div class="brandname">RIE BHOPAL LIBRARY</div><div class="brand-sub">READ • RESEARCH • DISCOVER</div></div><div class="top-actions"><button class="circle-btn" id="installBtn" aria-label="Install app" title="Install app" hidden><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m-5-5 5 5 5-5M4 17v3h16v-3"/></svg></button><button class="circle-btn" id="shareBtn" aria-label="Share app"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.7 10.6 6.6-4.2M8.7 13.4l6.6 4.2"/></svg></button></div></div>
-<div class="welcome"><div class="eyebrow">YOUR DIGITAL LEARNING SPACE</div><h1>Knowledge is<br>closer than ever.</h1><p>Explore library services, discover learning resources and connect with knowledge from anywhere.</p><div class="hero-actions"><a class="btn btn-light" href="https://riebhopallibrary.joomla.com/" target="_blank" rel="noopener">Visit Library Website <span>↗</span></a><a class="btn btn-glass" href="#quick">Explore services ↓</a></div></div></header>
-<div class="search-wrap"><label class="searchbox"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg><input id="search" type="search" placeholder="Search services and resources…" aria-label="Search services and resources"></label></div>
-<main class="content"><section class="section" id="quick"><div class="section-head"><div><h2>Quick access</h2><p>Your most-used library destinations</p></div><span class="text-link">EXPLORE</span></div><div class="quick-grid" id="quickGrid">
-<a class="quick-card searchable" data-terms="catalogue opac books search koha" href="http://13.126.40.108:8001/" target="_blank" rel="noopener"><span class="qicon t-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5M8 8h5M8 11h4"/></svg></span><strong>OPAC Catalogue</strong><small>Open catalogue access</small></a>
-<a class="quick-card searchable" data-terms="ebooks e-books digital textbook reading" href="https://riebhopallibrary.joomla.com/index.php/new-e-textbook" target="_blank" rel="noopener"><span class="qicon t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5A3.5 3.5 0 0 1 7.5 2H20v17H7.5A3.5 3.5 0 0 0 4 22V5.5Z"/><path d="M4 6h12M8 10h8M8 13h6"/></svg></span><strong>E-Textbooks</strong><small>Digital reading</small></a>
-<a class="quick-card searchable" data-terms="journals research articles magazines" href="https://riebhopallibrary.joomla.com/index.php/e-library/list-of-periodicals/e-journals" target="_blank" rel="noopener"><span class="qicon t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h5"/><path d="M3 6v15h14"/></svg></span><strong>Journals & Articles</strong><small>Research resources</small></a>
-<a class="quick-card searchable" data-terms="institutional repository dspace thesis reports" href="http://13.126.40.108:8080/jspui/" target="_blank" rel="noopener"><span class="qicon t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5"/></svg></span><strong>Digital Repository</strong><small>Digital collections</small></a>
-<a class="quick-card searchable" data-terms="n-list e resources e-resources online database" href="https://riebhopallibrary.joomla.com/index.php/e-library/open-access-e-resources" target="_blank" rel="noopener"><span class="qicon t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><strong>E-Resources</strong><small>Online learning tools</small></a>
-<a class="quick-card searchable" data-terms="new arrivals latest books new books" href="https://riebhopallibrary.joomla.com/" target="_blank" rel="noopener"><span class="qicon t-sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h14v17H5zM8 8h8M8 12h8"/><path d="M12 2v5M9.5 4.5h5"/></svg></span><strong>New Arrivals</strong><small>Check latest updates</small></a>
-<a class="quick-card searchable" data-terms="onos one nation one subscription research journals databases" href="https://www.onos.gov.in/ums/check-access" target="_blank" rel="noopener"><span class="qicon t-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0-18"/></svg></span><strong>ONOS</strong><small>One Nation One Subscription</small></a>
-<a class="quick-card searchable" data-terms="newspapers periodicals news daily" href="https://riebhopallibrary.joomla.com/index.php/e-library/list-of-periodicals/newspapers" target="_blank" rel="noopener"><span class="qicon t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h15v14H6a2 2 0 0 1-2-2V5Z"/><path d="M8 9h7M8 12h7M8 15h4"/></svg></span><strong>Newspapers</strong><small>Newspaper resources</small></a>
-<a class="quick-card searchable" data-terms="open access free books journals scholarly resources" href="https://riebhopallibrary.joomla.com/index.php/e-library/open-access-e-resources" target="_blank" rel="noopener"><span class="qicon t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0"/></svg></span><strong>Open Access</strong><small>Free scholarly resources</small></a>
-<a class="quick-card searchable" data-terms="research support services scholarly tools research assistance" href="https://riebhopallibrary.joomla.com/index.php/research-support-service" target="_blank" rel="noopener"><span class="qicon t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3M8 15h8"/></svg></span><strong>Research Support</strong><small>Tools and research help</small></a>
-</div><div class="empty" id="empty">No matching services found. Try another search.</div></section>
-<section class="section searchable" data-terms="digital learning virtual lab interactive content ar vr"><div class="section-head"><div><h2>Digital learning</h2><p>Go beyond the printed page</p></div></div><div class="feature-card"><div class="feature-copy"><span class="pill">Learn anywhere</span><h3>Open a world of learning.</h3><p>Access digital textbooks and explore the library's online learning resources on your smartphone.</p><a class="btn" href="https://riebhopallibrary.joomla.com/index.php/new-e-textbook" target="_blank" rel="noopener">Explore e-textbooks <span>↗</span></a></div><div class="book-art" aria-hidden="true"><svg viewBox="0 0 130 140" fill="none"><path d="M14 35c21-7 37-3 51 8v76c-14-11-30-15-51-8V35Z" fill="#fff" stroke="#1b6791" stroke-width="2.5"/><path d="M116 35c-21-7-37-3-51 8v76c14-11 30-15 51-8V35Z" fill="#d4f0eb" stroke="#1b6791" stroke-width="2.5"/><path d="M65 43v76" stroke="#1b6791" stroke-width="2.5"/><path d="M25 50c11-3 20-1 29 4M25 62c11-3 20-1 29 4M25 74c11-3 20-1 29 4M76 54c9-5 18-7 29-4M76 66c9-5 18-7 29-4M76 78c9-5 18-7 29-4" stroke="#69aaa9" stroke-width="2" stroke-linecap="round"/><circle cx="98" cy="22" r="14" fill="#f3a33b"/><path d="m92 22 4 4 8-9" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></section>
-<section class="section"><div class="section-head"><div><h2>Library online</h2><p>Useful links for your study and research</p></div></div><div class="resource-list">
-<a class="resource searchable" data-terms="official library website announcements services" href="https://riebhopallibrary.joomla.com/" target="_blank" rel="noopener"><span class="qicon t-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><span class="resource-copy"><strong>Official Library Website</strong><span>Announcements, services and library information</span></span><span class="arrow">›</span></a>
-<a class="resource searchable" data-terms="e-textbook digital books school textbook" href="https://riebhopallibrary.joomla.com/index.php/new-e-textbook" target="_blank" rel="noopener"><span class="qicon t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5A3.5 3.5 0 0 1 7.5 2H20v17H7.5A3.5 3.5 0 0 0 4 22V5.5Z"/></svg></span><span class="resource-copy"><strong>Digital Textbook Collection</strong><span>Open available e-textbooks and reading material</span></span><span class="arrow">›</span></a>
-<a class="resource searchable" data-terms="contact help support library" href="https://riebhopallibrary.joomla.com/index.php/contact" target="_blank" rel="noopener"><span class="qicon t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v12H8l-4 3V5Z"/><path d="M8 9h8M8 13h5"/></svg></span><span class="resource-copy"><strong>Library Help & Contact</strong><span>Visit the website for official contact details</span></span><span class="arrow">›</span></a>
-<a class="resource searchable" data-terms="onos one nation one subscription journals databases" href="https://www.onos.gov.in/ums/check-access" target="_blank" rel="noopener"><span class="qicon t-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg></span><span class="resource-copy"><strong>ONOS</strong><span>Access subscribed scholarly resources</span></span><span class="arrow">›</span></a>
-<a class="resource searchable" data-terms="newspapers periodicals news" href="https://riebhopallibrary.joomla.com/index.php/e-library/list-of-periodicals/newspapers" target="_blank" rel="noopener"><span class="qicon t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v14H6a2 2 0 0 1-2-2V5Z"/></svg></span><span class="resource-copy"><strong>Newspapers & Periodicals</strong><span>Browse newspaper resources</span></span><span class="arrow">›</span></a>
-<a class="resource searchable" data-terms="open access free journals books" href="https://riebhopallibrary.joomla.com/index.php/e-library/open-access-e-resources" target="_blank" rel="noopener"><span class="qicon t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h14v16H5zM8 8h8"/></svg></span><span class="resource-copy"><strong>Open Access E-Resources</strong><span>Free books, journals and learning resources</span></span><span class="arrow">›</span></a>
-<a class="resource searchable" data-terms="research support scholarly resources tools" href="https://riebhopallibrary.joomla.com/index.php/research-support-service" target="_blank" rel="noopener"><span class="qicon t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3h6M10 3v6l-5 9h14l-5-9V3"/></svg></span><span class="resource-copy"><strong>Research Support Services</strong><span>Research tools and scholarly support</span></span><span class="arrow">›</span></a>
-</div></section>
-<section class="section"><div class="notice"><span class="notice-icon">✦</span><div><strong>A smarter way to use your library</strong><p>Install this app from your browser for quick home-screen access. Online library services need an internet connection.</p></div></div></section>
-<footer class="footer">RIE Bhopal Library App<br>Designed for mobile access to library services.<br><a href="https://riebhopallibrary.joomla.com/" target="_blank" rel="noopener" style="color:#1769aa;font-weight:750">Official website ↗</a></footer></main>
-<nav class="bottom-nav" aria-label="Main navigation"><a class="nav-item active" href="#home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z"/></svg><span>Home</span></a><a class="nav-item" href="#quick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>Services</span></a><a class="nav-item" href="https://riebhopallibrary.joomla.com/index.php/e-library/open-e-book-collection" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5A3.5 3.5 0 0 1 7.5 2H20v17H7.5A3.5 3.5 0 0 0 4 22V5.5Z"/></svg><span>E-Books</span></a><a class="nav-item" href="https://riebhopallibrary.joomla.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Website</span></a></nav><div class="toast" id="toast" role="status"></div></div>
+<body>
+<div class="topbar">Regional Institute of Education · NCERT · Bhopal, Madhya Pradesh</div>
+<header>
+ <div class="wrap">
+  <div class="brand"><div class="logo" aria-hidden="true">📚</div><div><h1>RIE Bhopal Library</h1><p class="subtitle">Learning Resource Centre · Discover, learn and research</p></div></div>
+  <div class="hero">
+   <div><h2>Your gateway to learning and research</h2><p>Explore library services, online catalogues, e-books, journals and trusted educational resources from one place.</p>
+    <form class="searchrow" id="searchForm"><input id="searchInput" type="search" placeholder="Find a resource, e-book, journal…" aria-label="Search library links"><button type="submit">Search</button></form>
+    <div class="installhint" id="installHint">Tip: use your browser menu to add this library to your Home screen.</div>
+   </div>
+   <div class="hero-panel"><strong>📖 Learning starts here</strong><p>Quick access to digital learning platforms and research services. Some resources may require institute network access or an authorised login.</p></div>
+  </div>
+ </div>
+</header>
+<nav aria-label="Main navigation"><div class="navinner"><a href="#resources">E-Resources</a><a href="#catalogues">Catalogues</a><a href="#research">Research</a><a href="#services">Services</a><a href="#contact">Contact</a></div></nav>
+<main>
+ <section class="section" id="resources">
+  <div class="sectionhead"><div><h2>Explore E-Resources</h2><p>Open trusted learning platforms and digital collections.</p></div></div>
+  <div class="grid" id="resourceGrid">
+   <a class="card resource" data-search="onos one nation one subscription journals research" href="https://onos.gov.in/ums/check-access" target="_blank" rel="noopener"><div class="ico">🌐</div><div><h3>ONOS Access</h3><p>Check access to One Nation One Subscription resources.</p><span class="go">Open resource ↗</span></div></a>
+   <a class="card resource" data-search="national digital library india ndli books research" href="https://ndl.iitkgp.ac.in/" target="_blank" rel="noopener"><div class="ico">🏛️</div><div><h3>National Digital Library</h3><p>Discover learning materials across subjects and levels.</p><span class="go">Explore NDLI ↗</span></div></a>
+   <a class="card resource" data-search="nlist inflibnet journals ebooks" href="https://nlist.inflibnet.ac.in/veresources.php" target="_blank" rel="noopener"><div class="ico">📑</div><div><h3>N-LIST E-Resources</h3><p>Access subscribed academic e-resources where eligible.</p><span class="go">Open N-LIST ↗</span></div></a>
+   <a class="card resource" data-search="e pathshala ncert textbooks school education" href="https://epathshala.nic.in/" target="_blank" rel="noopener"><div class="ico">📘</div><div><h3>ePathshala</h3><p>NCERT textbooks and digital educational materials.</p><span class="go">Browse books ↗</span></div></a>
+   <a class="card resource" data-search="ncert educational resources books" href="https://ncert.nic.in/eresources.php" target="_blank" rel="noopener"><div class="ico">🎓</div><div><h3>NCERT E-Resources</h3><p>Educational resources published by NCERT.</p><span class="go">Explore NCERT ↗</span></div></a>
+   <a class="card resource" data-search="diksha digital infrastructure knowledge sharing education" href="https://diksha.gov.in/" target="_blank" rel="noopener"><div class="ico">💡</div><div><h3>DIKSHA</h3><p>Digital learning resources for education.</p><span class="go">Open DIKSHA ↗</span></div></a>
+   <a class="card resource" data-search="e shodh sindhu journals research scholarly" href="https://ess.inflibnet.ac.in/" target="_blank" rel="noopener"><div class="ico">🔬</div><div><h3>e-ShodhSindhu</h3><p>Information about scholarly electronic resources.</p><span class="go">Visit platform ↗</span></div></a>
+   <a class="card resource" data-search="google books ebooks" href="https://books.google.co.in/" target="_blank" rel="noopener"><div class="ico">📚</div><div><h3>Google Books</h3><p>Search book details and available previews.</p><span class="go">Search books ↗</span></div></a>
+   <a class="card resource" data-search="open access books epustakalay" href="https://epustakalay.com/" target="_blank" rel="noopener"><div class="ico">📗</div><div><h3>ePustakalay</h3><p>Explore online books and reading material.</p><span class="go">Browse collection ↗</span></div></a>
+  </div>
+  <div class="empty" id="empty">No matching resource found. Try a different search term.</div>
+ </section>
+ <section class="section" id="catalogues">
+  <div class="sectionhead"><div><h2>Library Catalogues & Collections</h2><p>Find books and institutional research outputs.</p></div></div>
+  <div class="grid">
+   <a class="card resource" data-search="single window search library catalogue books" href="http://13.126.40.108:8001/" target="_blank" rel="noopener"><div class="ico">🔎</div><div><h3>Single Window Search</h3><p>Search available library resources through the catalogue interface.</p><span class="go">Search catalogue ↗</span></div></a>
+   <a class="card resource" data-search="institutional repository dspace theses papers" href="http://13.126.40.108:8080/jspui/" target="_blank" rel="noopener"><div class="ico">🗂️</div><div><h3>Institutional Repository</h3><p>Explore repository materials when the service is available.</p><span class="go">Open repository ↗</span></div></a>
+   <a class="card resource" data-search="library website rie bhopal services updates" href="https://riebhopallibrary.joomla.com/" target="_blank" rel="noopener"><div class="ico">🏫</div><div><h3>Library Website</h3><p>Visit the library's main website for information and updates.</p><span class="go">Visit website ↗</span></div></a>
+  </div>
+ </section>
+ <section class="section" id="research">
+  <div class="sectionhead"><div><h2>Research Support</h2><p>Useful starting points for literature discovery and academic work.</p></div></div>
+  <div class="grid">
+   <a class="card resource" data-search="google scholar academic articles citation" href="https://scholar.google.com/" target="_blank" rel="noopener"><div class="ico">🧑‍🔬</div><div><h3>Google Scholar</h3><p>Search scholarly literature and citations.</p><span class="go">Find research ↗</span></div></a>
+   <a class="card resource" data-search="sage journals academic journal articles" href="https://journals.sagepub.com/" target="_blank" rel="noopener"><div class="ico">📰</div><div><h3>SAGE Journals</h3><p>Search journals and scholarly articles.</p><span class="go">Explore journals ↗</span></div></a>
+   <a class="card resource" data-search="epg pathshala postgraduate e content" href="https://epgp.inflibnet.ac.in/" target="_blank" rel="noopener"><div class="ico">🧠</div><div><h3>e-PG Pathshala</h3><p>Postgraduate e-content across academic disciplines.</p><span class="go">Study online ↗</span></div></a>
+  </div>
+ </section>
+ <section class="section" id="services">
+  <div class="sectionhead"><div><h2>Library Services</h2><p>Get library information and connect with the library team.</p></div></div>
+  <div class="stats">
+   <div class="stat"><strong>📚</strong><span>Learning resources</span></div>
+   <div class="stat"><strong>💻</strong><span>Digital access</span></div>
+   <div class="stat"><strong>🤝</strong><span>Research support</span></div>
+  </div>
+  <div class="card notice" style="margin-top:14px"><div class="ico">ℹ️</div><div><h3>Access note</h3><p>External platforms are operated by their respective providers. Availability, subscriptions and sign-in requirements may vary. This app does not collect your library credentials.</p></div></div>
+ </section>
+ <section class="section" id="contact">
+  <div class="sectionhead"><div><h2>Contact the Library</h2><p>For help with library resources and services.</p></div></div>
+  <div class="contactgrid">
+   <div class="card">
+    <div class="contactline"><span>📍</span><p><strong>Address</strong>Learning Resource Centre, Regional Institute of Education, Shyamla Hills, Bhopal – 462002, Madhya Pradesh, India.</p></div>
+    <div class="contactline"><span>☎️</span><p><strong>Telephone</strong><a href="tel:07552522005">0755-2522005</a></p></div>
+    <div class="contactline"><span>✉️</span><p><strong>Email</strong><a href="mailto:library.riebpl@gmail.com">library.riebpl@gmail.com</a></p></div>
+   </div>
+   <div class="card">
+    <h3 style="margin-top:0;color:var(--navy)">Find the Library</h3><p style="color:var(--muted)">Open directions to the Regional Institute of Education, Bhopal.</p>
+    <a class="btn" style="display:inline-block;background:var(--blue);color:white" href="https://www.google.com/maps/search/?api=1&query=Regional+Institute+of+Education+Shyamla+Hills+Bhopal" target="_blank" rel="noopener">Open Google Maps ↗</a>
+    <p style="font-size:.82rem;color:var(--muted);margin-top:14px">For enquiries, use the email link or the main library website.</p>
+    <a class="go" href="https://riebhopallibrary.joomla.com/" target="_blank" rel="noopener">Open official library website ↗</a>
+   </div>
+  </div>
+ </section>
+</main>
+<footer><p><strong>RIE Bhopal Library</strong> · Learning Resource Centre</p><p>Regional Institute of Education, NCERT, Bhopal</p><p>© <span id="year"></span> · Independent quick-access portal</p></footer>
 <script>
-(() => {
-  const search = document.getElementById('search');
-  const items = [...document.querySelectorAll('.searchable')];
-  const empty = document.getElementById('empty');
-  const toast = document.getElementById('toast');
-  let toastTimer;
-  function notify(message) {
-    toast.textContent = message;
-    toast.style.display = 'block';
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => { toast.style.display = 'none'; }, 2600);
-  }
-  search.addEventListener('input', () => {
-    const query = search.value.trim().toLowerCase();
-    let count = 0;
-    items.forEach(element => {
-      const matches = !query || (element.innerText + ' ' + (element.dataset.terms || '')).toLowerCase().includes(query);
-      element.style.display = matches ? '' : 'none';
-      if (matches) count++;
-    });
-    empty.style.display = count ? 'none' : 'block';
-  });
-  document.getElementById('shareBtn').addEventListener('click', async () => {
-    try {
-      if (navigator.share) await navigator.share({title: 'RIE Bhopal Library', text: 'Explore RIE Bhopal Library services and digital resources.', url: location.href});
-      else if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(location.href); notify('App link copied.'); }
-      else notify('Use your browser menu to share this app.');
-    } catch (error) { /* User cancelled sharing. */ }
-  });
-  let installPrompt;
-  const installButton = document.getElementById('installBtn');
-  window.addEventListener('beforeinstallprompt', event => {
-    event.preventDefault();
-    installPrompt = event;
-    installButton.hidden = false;
-  });
-  installButton.addEventListener('click', async () => {
-    if (!installPrompt) { notify('Open the browser menu and choose Install app or Add to Home screen.'); return; }
-    installPrompt.prompt();
-    await installPrompt.userChoice;
-    installPrompt = null;
-    installButton.hidden = true;
-  });
-  window.addEventListener('appinstalled', () => { installButton.hidden = true; notify('RIE Library app installed.'); });
-  if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-    window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(() => {}));
-  }
-  document.querySelectorAll('.nav-item').forEach(link => link.addEventListener('click', () => {
-    document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
-    link.classList.add('active');
-  }));
-})();
-</script></body></html>
+const form=document.getElementById('searchForm'),input=document.getElementById('searchInput'),cards=[...document.querySelectorAll('.resource')],empty=document.getElementById('empty');
+form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim().toLowerCase();let n=0;cards.forEach(card=>{const match=!q||(card.innerText+' '+(card.dataset.search||'')).toLowerCase().includes(q);card.style.display=match?'flex':'none';if(match)n++;});empty.style.display=n?'none':'block';document.querySelectorAll('main .section').forEach(section=>{if(section.id!=='services'&&section.id!=='contact'){const visible=[...section.querySelectorAll('.resource')].some(c=>c.style.display!=='none');section.style.display=visible?'':'none';}});});
+input.addEventListener('input',()=>{if(!input.value.trim()){cards.forEach(c=>c.style.display='flex');empty.style.display='none';document.querySelectorAll('main .section').forEach(s=>s.style.display='');}});
+document.getElementById('year').textContent=new Date().getFullYear();
+if('serviceWorker' in navigator && location.protocol==='https:'){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
+let deferredPrompt;const hint=document.getElementById('installHint');
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;hint.innerHTML='Ready to install? <button id="installBtn" type="button">Install app</button>';document.getElementById('installBtn').addEventListener('click',async()=>{deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;hint.textContent='If installation is available, follow the prompt to finish.';});});
+window.addEventListener('appinstalled',()=>{hint.textContent='RIE Bhopal Library is installed on this device.';});
+</script>
+</body>
+</html>
