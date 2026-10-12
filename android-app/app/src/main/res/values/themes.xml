@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.RIEBhopalLibrary" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#12365a</item>
+        <item name="colorPrimaryVariant">#0e2b43</item>
+        <item name="colorSecondary">#1769aa</item>
+        <item name="android:statusBarColor">#12365a</item>
+        <item name="android:windowBackground">#f3f7fb</item>
+    </style>
+</resources>
